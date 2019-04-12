@@ -1,17 +1,138 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+<ion-header padding>
+  <ion-row>
+    <ion-col style="text-align: left">
+      <button class='logoutBtn' ion-button id="logOutBtn" (click)=logOut() color='white'>
+        <img src="../../assets/imgs/icons8-door-opened-80.png" style="width : 40% ; height : 80%" >
+        {{'Log out' | translate }}
+      </button>
+    </ion-col>
+    <ion-col  col-6 style="text-align: center">
+        <h1 class='myTitle'>{{'About Me' | translate }}</h1>
+    </ion-col>
+    <ion-col  style="text-align: right">
+        <ion-label class='custNum'>
+            {{'Customer#' | translate }}: {{custNum}} <br>
+       </ion-label>
+    </ion-col>
+  </ion-row> 
+
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<!-- <h1> WE SHOULD ADD AUTOMATIC LOGOUT</h1>
+<script type="text/javascript" src="home.ts"></script>
+-->
+
+<ion-content padding scroll="false">
+
+  <ion-list>
+      <button class='logoutBtn' ion-button id="logOutBtn" (click)=storeID() color='white'>
+        Save  
+      </button>
+
+      <button class='logoutBtn' ion-button id="logOutBtn" (click)=displayInfo() color='white'>
+        Display Info  
+      </button>
+
+      <ion-item lines="inset">
+
+        <ion-row>
+
+          <ion-col class='firstCol'>
+            <!--
+            <button ion-button class='sideBtn' color='secondary'> 
+              <img src="https://img.icons8.com/flat_round/64/000000/question-mark.png" style="width : 20% ; height : 50%" >
+              &nbsp; {{'Need' | translate }} <br> &emsp;{{'help?' | translate }} &ensp;
+              <img src="https://img.icons8.com/ultraviolet/48/000000/maintenance.png">
+            </button>
+            -->
+          </ion-col>
+
+         <ion-col class='secondCol'>
+            <h2 class = 'transactionLabel'> {{'Last Transaction' | translate }} </h2>
+
+            <p class='transactionInfo'>
+              {{'Date' | translate }}: {{tdate}} <br>
+              {{'Amount' | translate }}: {{tamount}} <br>
+              {{'Vendor' | translate }}: {{vendor}} <br>
+            </p>
+         </ion-col>
+
+         <ion-col class='thirdCol'>
+            <button ion-button class='sideBtn' (click)=changeLang() color='secondary'> 
+                <img src="https://img.icons8.com/color/48/000000/france.png" style="width : 20% ; height : 50%">
+                {{'Change' | translate }} <br>  &nbsp; {{'Language' | translate }} &nbsp;
+                <img src="https://img.icons8.com/color/48/000000/the-republic-of-haiti.png" style="width : 20% ; height : 50%">
+            </button>
+          </ion-col>
+        
+        </ion-row>  
+
+        <ion-row>
+          <ion-col class='firstCol'>
+            <br>
+            <!--
+            <button ion-button class='sideBtn'  color='secondary'> 
+                <img src="https://img.icons8.com/ultraviolet/48/000000/reading.png">
+                {{'Learn' | translate }} <br> {{'more' | translate }}
+              </button>
+            -->
+          </ion-col>
+
+          <ion-col class='secondCol'>
+            <br>
+            <h2 class = 'transactionLabel'> {{'Should last about' | translate }}: <p class= 'transactionInfo2'>{{timeEst}} {{'months' | translate }}</p> </h2>            
+            
+            <br>
+            <h2 class = 'transactionLabel'> {{'Current tariff plan' | translate }}: <p class= 'transactionInfo2'>{{tariff}}</p> </h2>
+            <br>
+            <h2 class = 'transactionLabel'> {{'MeterId' | translate }}: <p class= 'transactionInfo2'>{{meterID}}</p> </h2>
+           
+          </ion-col>
+
+          <ion-col class='thirdCol'>
+            
+          </ion-col>
+
+        </ion-row>
+
+
+
+      </ion-item>
+  </ion-list>
+
+  <!--
+  <button ion-button (click)=getCustomerID()>Customer ID</button>
+  <button ion-button (click)=getAPIData()>API Data</button>
+  <br><br><br>
+  -->
+
 </ion-content>
+
+<ion-footer >
+  <ion-row>
+    <ion-col class='firstCol'>
+        <button class = "footBtn" ion-button  (click)=gotoPayInfo() color="white"> 
+          <img src="https://img.icons8.com/color/48/000000/payment-history.png">
+          &ensp; {{'Payment' | translate }} &ensp; <br>{{'Info1' | translate }}
+          <img src="https://img.icons8.com/color/48/000000/coins.png">
+        </button>
+    </ion-col>
+    <ion-col class='secondCol'>
+      <button class = "footBtn" ion-button  (click)=gotoUseInfo() color="white"> 
+        <img src="https://img.icons8.com/color/48/000000/electrical.png">
+        &ensp; {{'Usage' | translate }} &ensp; <br>{{'Info2' | translate }}
+        <img src="https://img.icons8.com/color/48/000000/light.png">
+      </button>
+    </ion-col>
+    <ion-col class='thirdCol'>
+        <button class = "footBtn" ion-button  (click)=gotoTariff() color="white"> 
+          <img src="https://img.icons8.com/color/48/000000/renew-subscription.png">
+          &ensp; {{'Tariff' | translate }} &ensp; <br>{{'Info3' | translate }}
+          <img src="https://img.icons8.com/color/48/000000/economic-improvement.png">
+        </button>    
+    
+    </ion-col>
+  </ion-row>
+
+  <a href="https://icons8.com/icon">Source of icons</a>
+</ion-footer>

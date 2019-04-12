@@ -1,0 +1,106 @@
+page-login{
+    @media only screen
+    and (max-width: 675px) {
+        .myTitle{
+            font-size: 2.7em !important;
+        }
+
+        .langBtn{
+            height: 50px !important;
+            width: 185px !important;
+            font-size: 1em;
+            text-align: center;
+        }
+    }
+ 
+    @media only screen
+    and (max-width: 820px) {
+        ion-header{
+            height: 80px;
+        }
+        .myTitle{
+            font-size: 3em;
+        }
+
+        .langBtn{
+            height: 50px;
+            width: 200px;
+            font-size: 1em;
+            text-align: center;
+        }
+    }
+ 
+    @media only screen
+    and (min-width: 820px) {
+        ion-header{
+            height: 100px;
+        }
+        .myTitle{
+            font-size: 3.6em;
+        }
+
+        .langBtn{
+            height: 55px;
+            width: 250px;
+            font-size: 1.4em;
+            text-align: center;
+        }
+    }
+
+
+    ion-header{
+        background-color: #ee7c12;
+        font-weight: bolder;
+    }
+    
+    img.a {
+        vertical-align: text-bottom;
+      }
+
+    .goButton{
+        font-weight: bold;
+        font-size: 2.0em;
+    }
+
+    .myTitle{
+        //font-style: oblique;
+        font-weight: bold;
+        text-align: center;
+        font-family: courier;
+        color: white;
+    }
+
+
+    .langBtn{
+        text-align: center;
+    }
+
+
+    
+    .imageBackground{
+        //background-image: url('https://pbs.twimg.com/profile_images/700357437384077313/taVKpqtM_400x400.jpg');
+        // background: url('../../img/getstart.png');
+        background-repeat: no-repeat;
+        //background-size:cover;
+        //background-size: contain;
+        background: #fff5e3;
+        background-position-y: bottom;
+        background-position-x: right;
+    }
+
+    
+    .toolbar-background {
+        background: rgba(255, 255, 255, 0.432);
+    }
+    .biggerLabel{
+        font-size: 3.7em;
+        min-width: 1% !important;
+        max-width: 200% !important;
+    }
+    .biggerLabelItalic{
+        font-size: 2.0em;
+        font-style: italic;
+        min-width: 1% !important;
+        max-width: 200% !important;
+    }
+}

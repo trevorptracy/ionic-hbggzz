@@ -1,0 +1,98 @@
+<!--
+  Generated template for the UsageInfoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header >
+
+    <ion-navbar>
+      <ion-row>
+  
+        <ion-col></ion-col>
+          <ion-col col-8 style="text-align: center">
+            <h1 class='myTitle'>
+              <img src="https://img.icons8.com/color/50/000000/electrical.png">
+              {{'Usage' | translate}} {{'Info2' | translate}}
+              <img src="https://img.icons8.com/color/50/000000/light.png">
+            </h1>
+          </ion-col>
+  
+  
+          <ion-col style="text-align: right;">
+            <br>
+            <button class='logoutBtn' ion-button id="logOutBtn" (click)=logOut() color='white'>
+              <img src="../../assets/imgs/icons8-door-opened-80.png" style="width : 40% ; height : 80%" ng-click="nextpage()" >
+              {{'Log out'| translate}}
+            </button>
+          </ion-col>
+  
+        </ion-row> 
+  
+    </ion-navbar>
+  
+  </ion-header>
+
+
+<ion-content padding scroll='false'>
+<ion-row>
+  <ion-col>
+    <h2 class="transactionLabel">{{'Total Energy:'| translate}} 124 kWh</h2>
+    <p class="transactionInfo">
+        <strong>{{'Usage off-peak:'| translate}}</strong> 20 kWh <br> 
+        <strong>{{'Usage on-peak:'| translate}}</strong> 40 kWh<br>
+      <strong>{{'Suggested usage off-peak:'| translate}}</strong> 10 kWh
+    </p>
+
+  </ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col align = 'center'>
+
+      <h2 class="transactionTitle">{{'Energy used:'| translate}}</h2>
+      <p class="transactionInfo">
+          {{'this month'| translate}} <br>
+          {{'this year'| translate}} <br>
+          {{'every year'| translate}} <br>
+          <img src="https://img.icons8.com/ios/100/000000/hand-down.png" style="height: 80% ; width: 12%;">
+
+      </p>
+  </ion-col>
+
+
+  <ion-col align = 'center' style="top:24px">
+      <h2 class="transactionTitle">
+        {{'Compare:'| translate}}
+      </h2>
+      <p class="transactionInfo">
+        {{'This month vs. last month'| translate}} <br>
+        {{'This year vs. last year'| translate}} <br>
+        <img src="https://img.icons8.com/ios/100/000000/hand-down.png" style="height: 80% ; width: 12%;">
+
+      </p>
+  </ion-col>
+</ion-row>
+
+</ion-content>
+
+<ion-footer>
+    <ion-row>
+        <ion-col align = 'center'>
+        <button ion-button color="white" class="footerBtn" (click)=gotoUsageOvertime()> 
+          <img src="https://img.icons8.com/color/96/000000/electrical.png">
+          <img src="https://img.icons8.com/color/96/000000/combo-chart.png">
+        </button>
+        </ion-col>
+        <!--<button ion-button  (click)=gotoOnOffPeak()> KWh On & Off Peak </button>-->
+
+        <ion-col align = 'center'>
+      
+        <button ion-button color="white" class="footerBtn" (click)=gotoThenNow()> 
+            <img src="https://img.icons8.com/color/96/000000/calendar.png">
+            <img src="https://img.icons8.com/color/85/000000/scales.png">
+            <img src="https://img.icons8.com/color/96/000000/calendar-minus.png">
+        </button>
+        </ion-col>
+      </ion-row>
+</ion-footer>

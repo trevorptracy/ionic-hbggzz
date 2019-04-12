@@ -1,0 +1,139 @@
+page-then-now {
+
+
+    ion-footer{ 
+        height: 80px;
+        //background-color: #ee7c12;
+        background-color: #90d1fc;
+        font-weight: bolder;
+    }
+
+    ion-header{
+        height: 100px;
+        //background-color: #ee7c12;
+        background-color: #1d89d1;
+        font-weight: bolder;
+    }
+
+    ion-navbar{
+        height:100px;
+    }
+
+
+    ion-toolbar{
+        height: 70px;
+    }
+
+    ion-label{
+        color: primary;
+        font-size: 1.5em;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    h1{
+        color: #175c8a;
+        font-weight: bold;
+        font-size: 2.0em;    
+    }
+
+    .logoutBtn{
+        height: 65px;
+        width: 210px;
+        font-size: 1.4em;
+        text-align: center;
+    }
+
+    .footBtn{
+        height: 80px;
+        width: 200px;
+        font-size: 1.5em;
+        text-align: center;
+    }
+    .pickgrf{
+        font-size: 3.0em; 
+        text-align: center;
+    }
+    .sideBtn{
+        height: 80px;
+        width: 250px;
+        font-size: 1.5em;
+    }
+
+    img.a {
+        vertical-align: text-bottom;
+      }
+
+    .myTitle{
+        font-size: 2.5em;
+        //font-style: oblique;
+        font-weight: bold;
+        text-align: center;
+        font-family: courier;
+        color: white;
+    }
+
+    .custNum{
+        font-size: 2.0em;
+        //font-style: oblique;
+        font-weight: bold;
+        text-align: center;
+        font-family: courier;
+        color: white;
+        align-items: right;
+    }
+
+    .imageBackground{
+        //background-image: url('https://pbs.twimg.com/profile_images/700357437384077313/taVKpqtM_400x400.jpg');
+        // background: url('../../img/getstart.png');
+        background-repeat: no-repeat;
+        //background-size:cover;
+        //background-size: contain;
+        background: #fff5e3;
+        background-position-y: bottom;
+        background-position-x: right;
+    }
+
+    .transactionLabel{
+        font-size: 2.0em;
+        min-width: 1% !important;
+        max-width: 200% !important;
+        text-align: center;
+    }
+
+    .transactionInfo{
+        font-size: 1.5em;
+        min-width: 1% !important;
+        max-width: 200% !important;
+        text-align: center;
+    }
+    .transactionInfo2{
+        font-size: 0.8em;
+        min-width: 1% !important;
+        max-width: 200% !important;
+        text-align: center;
+    }
+
+    .firstCol{
+        text-align: left;
+    }
+
+    .secondCol{
+        text-align: center;
+    }
+
+    .thirdCol{
+        text-align: right;
+        
+    }
+
+    .footBtn{
+        height: 80px;
+        width: 400px;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+
+
+}

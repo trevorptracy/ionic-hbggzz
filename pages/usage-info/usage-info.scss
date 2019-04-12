@@ -1,0 +1,163 @@
+page-usage-info {
+    @media only screen
+    and (max-width: 710px) {
+        .myTitle{
+            font-size: 1.5em !important;
+        }
+        .logoutBtn{
+            width: 100px !important;
+        }
+
+    } 
+
+    @media only screen
+    and (max-width: 890px) {
+        .myTitle{
+            font-size: 2.2em;
+        }
+        .logoutBtn{
+            width: 210px;
+        }
+        .footerBtn{
+            width: 300px;
+        }
+    }
+    
+    @media only screen
+    and (min-width: 890px) {
+        .myTitle{
+            font-size: 2.2em;
+        }
+        .logoutBtn{
+            width: 210px;
+        }
+        .footerBtn{
+            width: 430px;
+        }
+    }
+    html{
+        min-height:100%;/* make sure it is at least as tall as the viewport */
+        position:relative;
+    }
+    ion-content{
+        height:100%; /* force the BODY element to match the height of the HTML element */
+    }
+
+    ion-footer{ 
+        height: 100px;
+        //background-color: #ee7c12;
+        background-color: #1d89d1;
+        font-weight: bolder;
+    }
+
+    ion-header{
+        height: 100px;
+        //background-color: #ee7c12;
+        background-color: #1d89d1;
+        font-weight: bolder;
+    }
+
+    ion-navbar{
+        height:100px;
+    }
+
+    .logoutBtn{
+        height: 65px;
+        font-size: 1.4em;
+        text-align: center;
+    }
+
+    .footerBtn{
+        height: 80px;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .sideBtn{
+        height: 80px;
+        width: 250px;
+        font-size: 1.5em;
+    }
+
+    img.a {
+        vertical-align: text-bottom;
+      }
+
+    .myTitle{
+        //font-style: oblique;
+        font-weight: bold;
+        text-align: center;
+        font-family: courier;
+        color: white;
+    }
+
+    .custNum{
+        font-size: 1.8em;
+        //font-style: oblique;
+        font-weight: bold;
+        text-align: center;
+        font-family: courier;
+        color: white;
+        align-items: right;
+    }
+
+    .imageBackground{
+        //background-image: url('https://pbs.twimg.com/profile_images/700357437384077313/taVKpqtM_400x400.jpg');
+        // background: url('../../img/getstart.png');
+        background-repeat: no-repeat;
+        //background-size:cover;
+        //background-size: contain;
+        background: #fff5e3;
+        background-position-y: bottom;
+        background-position-x: right;
+    }
+
+    .transactionLabel{
+        font-size: 1.8em;
+        min-width: 1% !important;
+        max-width: 200% !important;
+        text-align: center;
+        height: 13%;
+    }
+
+    .transactionTitle{
+        font-size: 1.8em;
+        min-width: 1% !important;
+        max-width: 200% !important;
+        text-align: center;
+        height: 7%;
+    }
+
+    .transactionInfo{
+        font-size: 1.4em;
+        min-width: 1% !important;
+        max-width: 200% !important;
+        text-align: center;
+    }
+    .transactionInfo2{
+        font-size: 0.8em;
+        min-width: 1% !important;
+        max-width: 200% !important;
+        text-align: center;
+    }
+
+    .row-header{
+        background-color: lightgrey;
+    }
+
+    .tableFont{
+        font-size: 1em;
+    }
+
+.ngx-datatable.bootstrap {
+box-shadow: none;
+font-size: 20px;
+}
+
+.footBtn{
+height: 80px;
+width: 400px;
+font-size: 1.5em;
+text-align: center;
+}
+}

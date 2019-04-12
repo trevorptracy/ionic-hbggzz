@@ -1,0 +1,158 @@
+<!--
+  Generated template for the UsageOverTimePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <ion-row>
+    
+          <ion-col></ion-col>
+            <ion-col col-8 style="text-align: center">
+              <div [ngSwitch]="graphs">
+               <ion-list *ngSwitchCase="">
+                  <h1 class='myTitle1'>
+                    <img src="https://img.icons8.com/color/48/000000/electrical.png">
+                    {{'Pick a graph' | translate }}
+                    <img src="https://img.icons8.com/color/48/000000/combo-chart.png">            
+                  </h1>
+                </ion-list>
+
+                <ion-list *ngSwitchCase="'over-month'">
+                  <h1 class='myTitle1'>
+                      <img src="https://img.icons8.com/color/48/000000/electrical.png">
+                    {{'Energy this month' | translate }}
+                    <img src="https://img.icons8.com/color/48/000000/combo-chart.png"> 
+                  </h1>
+                </ion-list>
+
+                <ion-list *ngSwitchCase="'over-year'">
+                  <h1 class='myTitle1'>
+                      <img src="https://img.icons8.com/color/48/000000/electrical.png">
+                    {{'Energy this year' | translate }}
+                    <img src="https://img.icons8.com/color/48/000000/combo-chart.png"> 
+                  </h1>
+                </ion-list>
+
+                <ion-list *ngSwitchCase="'since-act'">
+                  <h1 class='myTitle2'>
+                      <img src="https://img.icons8.com/color/48/000000/electrical.png">
+                    {{'Energy every year' | translate }}
+                    <img src="https://img.icons8.com/color/48/000000/combo-chart.png"> 
+                  </h1>
+                </ion-list>
+              </div>
+            </ion-col>
+    
+    
+            <ion-col style="text-align: right;">
+              <br>
+              <button class='logoutBtn' ion-button id="logOutBtn" (click)=logOut() color='white'>
+                <img src="../../assets/imgs/icons8-door-opened-80.png" style="width : 40% ; height : 80%" ng-click="nextpage()" >
+                {{'Log out' | translate }}
+              </button>
+            </ion-col>
+    
+          </ion-row> 
+    
+      </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+    <div [ngSwitch]="graphs">
+        <ion-list *ngSwitchCase="">
+            <h1 class="pickgrf"><br>{{'Pick a graph'| translate}} 
+              <br><img src="https://img.icons8.com/ios/150/000000/hand-down.png"> 
+            </h1>
+          </ion-list>
+
+      <ion-list *ngSwitchCase="'over-month'">
+        <ion-item>
+
+          <ion-row>
+            <ion-col col-12>
+              <div style="display: block;">
+                  <canvas baseChart height="320"
+                          [datasets]="thisMonthData"
+                          [labels]="thisMonthLabel"
+                          [options]="lineChartOptions"
+                          [colors]="lineChartColors"
+                          [legend]="lineChartLegend"
+                          [chartType]="lineChartType"
+                          (chartHover)="chartHovered($event)"
+                          (chartClick)="chartClicked($event)"></canvas>
+              </div>
+            </ion-col>
+          </ion-row>
+
+        </ion-item>
+      </ion-list>
+
+      <ion-list *ngSwitchCase="'over-year'">
+        <ion-item>
+
+          <ion-row>
+            <ion-col col-12>
+              <div style="display: block;">
+                  <canvas baseChart height="320"
+                          [datasets]="thisYearData"
+                          [labels]="thisYearLabel"
+                          [options]="lineChartOptions"
+                          [colors]="lineChartColors"
+                          [legend]="lineChartLegend"
+                          [chartType]="lineChartType"
+                          (chartHover)="chartHovered($event)"
+                          (chartClick)="chartClicked($event)"></canvas>
+              </div>
+            </ion-col>
+          </ion-row>
+
+        </ion-item>
+      </ion-list>
+
+      <ion-list *ngSwitchCase="'since-act'">
+          <ion-item>
+            <ion-row>
+              <ion-col col-12>
+                <div style="display: block;">
+                    <canvas baseChart height="320"
+                            [datasets]="allYearsData"
+                            [labels]="allYearsLabel"
+                            [options]="lineChartOptions"
+                            [colors]="lineChartColors"
+                            [legend]="lineChartLegend"
+                            [chartType]="lineChartType"
+                            (chartHover)="chartHovered($event)"
+                            (chartClick)="chartClicked($event)"></canvas>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-item>
+      </ion-list>
+
+
+    </div>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar color="white">
+    <ion-segment [(ngModel)]="graphs">
+      <ion-segment-button value = "over-month">
+        <ion-label> {{'this month' | translate }}</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value = "over-year">
+        <ion-label> {{'this year' | translate }}</ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value = "since-act">
+        <ion-label class='smallLabel'> {{'every year' | translate }}</ion-label>
+      </ion-segment-button>
+
+    </ion-segment>
+  </ion-toolbar>
+
+</ion-footer>

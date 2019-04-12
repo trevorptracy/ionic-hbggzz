@@ -1,0 +1,76 @@
+<!--
+  Generated template for the PayInfoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header >
+
+  <ion-navbar>
+    <ion-row>
+
+      <ion-col></ion-col>
+        <ion-col col-8 style="text-align: center">
+          <h1 class='myTitle'>
+              <img src="https://img.icons8.com/color/50/000000/payment-history.png">
+              {{'Payment Info'| translate}}
+              <img src="https://img.icons8.com/color/50/000000/coins.png">
+          </h1>
+        </ion-col>
+
+
+        <ion-col style="text-align: right;">
+          <br>
+          <button class='logoutBtn' ion-button id="logOutBtn" (click)=logOut() color='white'>
+            <img src="../../assets/imgs/icons8-door-opened-80.png" style="width : 40% ; height : 80%" ng-click="nextpage()" >
+            {{'Log out'| translate}}
+          </button>
+        </ion-col>
+
+      </ion-row> 
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<!--
+  <p>
+  Shows how to include charts: https://www.youtube.com/watch?v=K4b_-zLd_4s <br>
+  Shows how to make grid: https://ionicframework.com/docs/api/components/grid/Grid/
+  </p>
+-->
+
+  <h2>
+    {{'List of all transactions:' | translate}}
+  </h2>
+  <ngx-datatable class="bootstrap" [ngClass]="tablestyle" [rows]="rows" [columnMode]="'force'" [sortType]="'multi'" [reorderable]="false" [columns]="columns" [rowHeight]='auto'>
+    <ngx-datatable-column name="Date">
+        <ng-template let-column="column" ngx-datatable-header-template>
+          {{'Date'| translate}}
+        </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Amount">
+        <ng-template let-column="column" ngx-datatable-header-template>
+            {{'Amount'| translate}} (G)
+          </ng-template>
+    </ngx-datatable-column>
+  </ngx-datatable>
+
+
+
+</ion-content>
+
+<ion-footer align='center'>
+  <button ion-button class = "footBtn" style="width:450px;" color="white" (click)=gotoGraphs()> 
+    <img src="https://img.icons8.com/color/48/000000/combo-chart.png">
+    &emsp;{{'Payment Graphs'| translate}} &emsp;
+    <img src="https://img.icons8.com/color/48/000000/economic-improvement.png">
+  </button>
+  <!--
+  <button ion-button class = "footBtn" color="white" (click)=getCustomer()> 
+    Get API
+  </button>
+  -->
+</ion-footer>

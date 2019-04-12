@@ -1,0 +1,78 @@
+page-change-language {
+    @media only screen
+    and (max-width: 810px) {
+ 
+        .langBtn{
+            height: 150px !important;
+            width: 200px !important;
+        }
+    }
+
+
+
+    ion-header{
+        height: 100px;
+        //background-color: #ee7c12;
+        background-color: #1d89d1;
+        font-weight: bolder;
+    }
+
+    h2{
+        color: #1d89d1;
+    }
+
+    ion-navbar{
+        height:100px;
+    }
+
+    .langBtn{
+        background-color: transparent;
+        height: 200px;
+        width: 250px;
+        color: black;
+    }
+
+    .logoutBtn{
+        height: 55px;
+        width: 150px;
+        font-size: 1.4em;
+        text-align: center;
+    }
+
+
+    .myTitle{
+        font-size: 3.6em;
+        //font-style: oblique;
+        font-weight: bold;
+        text-align: center;
+        font-family: courier;
+        color: white;
+    }
+
+
+
+.ngx-datatable.bootstrap {
+box-shadow: none;
+font-size: 20px;
+}
+
+.footBtn{
+height: 80px;
+width: 400px;
+font-size: 1.5em;
+text-align: center;
+}
+
+.firstCol{
+    text-align: center;
+}
+
+.secondCol{
+    text-align: center;
+}
+
+.thirdCol{
+    text-align: center;
+    
+}
+}

@@ -1,0 +1,41 @@
+<!--
+  Generated template for the ChangeLanguagePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+      <h1 class="myTitle">
+        {{ 'Choose a Language' | translate }}
+      </h1>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+    
+    <ion-row> 
+      <ion-col col-4 class='firstCol'>
+        <button ion-button class = "langBtn" (click)=hcLang()> 
+          <img src="https://img.icons8.com/color/96/000000/the-republic-of-haiti.png" style="width : 100% ; height : 110%">
+        </button>
+        <h2>Kreyòl Ayisyen</h2>
+      </ion-col>
+      <ion-col col-4 class='secondCol'>
+        <button class = "langBtn" ion-button (click)=frLang()> 
+          <img src="https://img.icons8.com/color/96/000000/france.png" style="width : 100% ; height : 110%">
+        </button>  
+        <h2>Français</h2>   
+      </ion-col>
+      <ion-col col-4 class="thirdCol">
+          <button ion-button class = "langBtn" (click)=enLang()> 
+          <img src="https://img.icons8.com/color/96/000000/great-britain.png" style="width : 100% ; height : 110%">
+          </button>
+          <h2>English</h2>
+        </ion-col>
+    </ion-row>
+  
+  </ion-content>

@@ -1,0 +1,70 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header padding>
+
+  <ion-row>
+    
+      <ion-col col-8 style="text-align: center">
+        <h1 class='myTitle'> &nbsp; &nbsp; &nbsp; Jolt Kiosk</h1>
+      </ion-col>
+
+
+      <ion-col style="text-align: right;">
+        <button ion-button class='langBtn' (click)=changeLang() color='primary'> 
+          <img src="https://img.icons8.com/color/48/000000/france.png">
+          {{'Change' | translate }} <br>  &nbsp; {{'Language' | translate}} &nbsp;
+          <img src="https://img.icons8.com/color/48/000000/the-republic-of-haiti.png">
+      </button>
+      </ion-col>
+
+    </ion-row> 
+  
+</ion-header>
+
+
+<ion-content padding class='imageBackground'>
+
+    
+
+      <script type="text/javascript" src="login.ts"></script>
+      <ion-row>
+        <ion-item>
+          <ion-label color="dark" class="biggerLabel">{{'ID'| translate}} <img class="a" src="http://clipart-library.com/img/1667191.png" width="80"></ion-label>
+          <ion-input placeholder="({{'Touch Here'| translate}})" class="biggerLabelItalic" [(ngModel)]="user.email"></ion-input>
+          <!--place this in ion-input for number only keyboard: type="number"--> 
+        </ion-item>
+      </ion-row>
+      <ion-row>
+        <ion-item>
+          <ion-label color="dark" class="biggerLabel">{{'Code'| translate}} <img class="a" src="http://clipart-library.com/img/1667191.png" width="80"></ion-label>
+          <ion-input placeholder="({{'Touch Here'| translate}})" class="biggerLabelItalic"  [(ngModel)]="user.password"></ion-input>
+          <!--place this in ion-input for number only keyboard: type="number"--> 
+        </ion-item>
+      </ion-row>
+      
+<ion-row>
+  &nbsp;
+</ion-row>    
+      
+<ion-row>
+  <ion-col  style="text-align: center">
+    <button ion-button class="goButton" block large (click)=logIn(user)><p>&nbsp;&nbsp;&nbsp;{{'Go'| translate}}&nbsp;&nbsp;&nbsp;</p></button>
+  </ion-col>
+</ion-row>
+
+<br>
+
+<!--
+
+<ion-row style="bottom: 3em;">
+    <button ion-button color="secondary" (click)=register()>Register</button>
+    <button ion-button color="secondary" (click)=fullscreen()>Fullscreen</button>
+    <button ion-button color="secondary" (click)=screensaver()>ScreenSaver</button>
+</ion-row>
+
+-->
+</ion-content>
